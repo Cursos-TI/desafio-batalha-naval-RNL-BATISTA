@@ -11,7 +11,6 @@ int main(){
             campo[i][k]=0;
         }
     }//Atribuindo valores ao campo
-    
 
     for(int v=0; v<3; v++){
         campo[3][6+v]=navio1[v];
@@ -28,6 +27,25 @@ int main(){
     for(int i=0; i<3; i++){
         campo[0+i][6+i]=navio4[i];
     }//Aplicando Navio4 ao campo
+
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < i; j++) {
+            campo[i][j]=5;
+        }
+    }
+    for(int i=0; i<5; i++){
+        for(int p=0;p<5;p++){
+            campo[5][5-p]=5;
+            campo[5][5+p]=5;
+        }
+        campo[5-i][5]=5;
+        campo[5+i][5]=5;
+    }//habilidade x
+    campo[1][1]=5;
+    campo[1][1-1]=5;
+    campo[1][1+1]=5;
+    campo[1-1][1]=5;
+    campo[1+1][1]=5;// habilidade cruz
 
     printf("    A  B  C  D  E  F  G  H  I  J\n");
     for(int i=0; i<10; i++){
